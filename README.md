@@ -314,14 +314,5 @@ The system includes robust error handling:
 - The web UI automatically extracts and displays URLs for easy reference
 - All external content is sanitized and escaped for security
 
----
 
-## 🤝 Contributing
-
-This project demonstrates:
-- Multi-agent LLM orchestration patterns
-- LangChain integration with custom tools
-- Web scraping and content extraction
-- HTTP server implementation in Python
-- Modern UI/UX design principles
 - Robust error handling in distributed systems
