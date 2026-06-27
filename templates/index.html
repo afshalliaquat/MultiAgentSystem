@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MultiAgent Research Pipeline</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <div class="hero-card">
+                <div class="eyebrow">MultiAgent Research Pipeline</div>
+                <h1>Professional research output in one clean workspace.</h1>
+                <p class="lede">
+                    Enter a topic, run the existing pipeline, and review the search summary,
+                    extracted sources, scraped content, report, and critique in a polished interface.
+                </p>
+                <div class="meta-grid">
+                    <div class="meta">
+                        <span>Current Topic</span>
+                        <strong>{{TOPIC}}</strong>
+                    </div>
+                    <div class="meta">
+                        <span>Output</span>
+                        <strong>Search, scrape, report, and review</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card">
+                <h2>Run a Research Topic</h2>
+                <p>Use the same pipeline, now presented through a focused browser UI.</p>
+                <form method="post">
+                    <div>
+                        <label for="topic">Research topic</label>
+                        <input id="topic" name="topic" type="text" value="{{TOPIC_VALUE}}" placeholder="Enter a topic to research" required>
+                    </div>
+                    <button type="submit">Generate Research Output</button>
+                </form>
+                {{ERROR}}
+            </div>
+        </section>
+
+        <section class="details" style="display: {{DETAIL_VISIBLE}};">
+
+            <article class="result-card">
+                <h3>Extracted URLs</h3>
+                <ul class="url-list">
+                    {{URLS}}
+                </ul>
+            </article>
+
+            <article class="result-card">
+                <h3>Report</h3>
+                <pre>{{REPORT}}</pre>
+            </article>
+
+            <article class="result-card">
+                <h3>Search Summary</h3>
+                <pre>{{SEARCH_RESULTS}}</pre>
+            </article>
+
+            <article class="result-card">
+                <h3>Critic Feedback</h3>
+                <div class="score-display">{{SCORE}}</div>
+                <pre>{{FEEDBACK}}</pre>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
